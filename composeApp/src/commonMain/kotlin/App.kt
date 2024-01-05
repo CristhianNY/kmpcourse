@@ -12,24 +12,30 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.arkivanov.decompose.extensions.compose.jetbrains.stack.Children
+import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.slide
+import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.stackAnimation
+import com.arkivanov.decompose.extensions.compose.jetbrains.subscribeAsState
+import navigation.RootComponent
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
+import screens.HomeScreen
+import screens.LoginScreen
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-fun App() {
+fun App(rootComponent: RootComponent) {
     MaterialTheme {
-        var showContent by remember { mutableStateOf(false) }
-        val greeting = remember { Greeting().greet() }
-        Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-            Button(onClick = { showContent = !showContent }) {
-                Text("Click me!")
-            }
-            AnimatedVisibility(showContent) {
-                Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-                    Image(painterResource("compose-multiplatform.xml"), null)
-                    Text("Compose: $greeting")
-                }
+        val childStack by rootComponent.childStack.subscribeAsState()
+
+        Children(
+            stack = childStack,
+            animation = stackAnimation(slide())
+        ) { child ->
+
+            when (val instance = child.instance) {
+                is RootComponent.Child.ScreenLogin -> LoginScreen(instance.component)
+                is RootComponent.Child.ScreenHome -> HomeScreen(instance.component)
             }
         }
     }
