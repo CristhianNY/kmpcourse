@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
+    alias(libs.plugins.kotlinSerialization)
 }
 
 kotlin {
@@ -32,6 +33,9 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.decompose)
+            api(libs.koin.android)
+            api(libs.koin.core)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -40,6 +44,14 @@ kotlin {
             implementation(compose.ui)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
+            implementation(libs.decompose)
+            implementation(libs.decompose.jetbrains)
+            api(libs.koin.core)
+            api(libs.koin.test)
+            implementation(libs.koin.compose)
+            implementation(project.dependencies.platform(libs.koin.bom))
+            api(libs.mvvm.core)
+            api (libs.mvvm.compose)
         }
     }
 }
