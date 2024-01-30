@@ -1,5 +1,7 @@
 package di
 
+import data.ExampleDataSource
+import data.ExampleDataSourceImpl
 import domain.ExampleRepository
 import domain.ExampleRepositoryImpl
 import org.koin.core.module.dsl.createdAtStart
@@ -11,8 +13,14 @@ import screens.HomeViewModel
 
 val sharedModule = module {
 
+    single<ExampleDataSource> {
+        ExampleDataSourceImpl()
+    }.withOptions {
+        createdAtStart()
+        named("ExampleDataSource")
+    }
     single<ExampleRepository> {
-        ExampleRepositoryImpl()
+        ExampleRepositoryImpl(exampleDataSource = get(qualifier("ExampleDataSource")))
     }.withOptions {
         createdAtStart()
         named("ExampleRepository")
