@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.kotlinSerialization)
 }
 
+
 kotlin {
     androidTarget {
         compilations.all {
@@ -38,7 +39,10 @@ kotlin {
             implementation(libs.ktor.client.cio)
             api(libs.koin.android)
             api(libs.koin.core)
-
+            implementation(libs.firebase.ui.auth)
+            implementation (libs.firebase.auth.ktx)
+            implementation(libs.play.services.auth)
+            implementation(libs.firebase.perf.ktx)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -60,6 +64,7 @@ kotlin {
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.kamel.image)
+            implementation(libs.firebase.auth)
         }
     }
 }
@@ -73,7 +78,7 @@ android {
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
-        applicationId = "com.cristhian.bonilla"
+        applicationId = "com.cristhian.bonilla.KMPExample"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -95,6 +100,10 @@ android {
     }
     dependencies {
         debugImplementation(libs.compose.ui.tooling)
+
     }
 }
+dependencies {
 
+}
+apply(plugin = "com.google.gms.google-services")

@@ -4,6 +4,7 @@ import data.ExampleDataSource
 import data.ExampleDataSourceImpl
 import domain.ExampleRepository
 import domain.ExampleRepositoryImpl
+import login.SignInViewModel
 import org.koin.core.module.dsl.createdAtStart
 import org.koin.core.module.dsl.named
 import org.koin.core.module.dsl.withOptions
@@ -12,6 +13,8 @@ import org.koin.dsl.module
 import screens.HomeViewModel
 
 val sharedModule = module {
+
+    single { SignInViewModel() }
 
     single<ExampleDataSource> {
         ExampleDataSourceImpl()
@@ -29,4 +32,5 @@ val sharedModule = module {
     single {
         HomeViewModel(exampleRepository = get(qualifier = qualifier("ExampleRepository")))
     }
+
 }

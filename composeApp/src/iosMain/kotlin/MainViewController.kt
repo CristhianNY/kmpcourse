@@ -7,7 +7,7 @@ import navigation.RootComponent
 import org.koin.core.context.startKoin
 
 fun MainViewController() = ComposeUIViewController {
-    val root = remember { RootComponent(DefaultComponentContext(LifecycleRegistry())) }
+    val root = remember { RootComponent(DefaultComponentContext(LifecycleRegistry()), null) }
     App(root)
 }
 

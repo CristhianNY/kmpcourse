@@ -6,7 +6,8 @@ import com.arkivanov.decompose.value.Value
 
 class ScreenLoginComponent(
     componentContext: ComponentContext,
-    private val onNavigationToHome: (String) -> Unit
+    private val onNavigationToHome: (String) -> Unit,
+    private val onLoginSuccess: () -> Unit,
 ) : ComponentContext by componentContext {
 
     private var _text = MutableValue("")
@@ -16,6 +17,7 @@ class ScreenLoginComponent(
         when (event) {
             ScreenLoginEvent.ClickButtonLogin -> onNavigationToHome(text.value)
             is ScreenLoginEvent.UpdateText -> _text.value = event.text
+            is ScreenLoginEvent.GoToHome -> onLoginSuccess.invoke()
         }
     }
 }

@@ -13,6 +13,7 @@ androidx-test-junit = "1.1.5"
 compose = "1.5.4"
 compose-compiler = "1.5.6"
 compose-plugin = "1.5.11"
+google-googleServices = "4.4.1"
 junit = "4.13.2"
 kotlin = "1.9.21"
 decompose = "2.2.0-alpha03"
@@ -28,7 +29,15 @@ kamelImage = "0.9.1"
 
 mvvmCore = "0.16.1"
 
+firebaseAuth = "1.10.4"
+firebaseAuthKtx = "22.3.1"
+firebaseUiAuth = "7.2.0"
+firebasePerfKtx = "20.5.2"
+playServicesAuth = "20.7.0"
+googleServices = "4.4.1"
+
 [libraries]
+google-services = { module = "com.google.gms:google-services", version.ref = "google-googleServices" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -63,9 +72,17 @@ mvvm-compose = { module = "dev.icerock.moko:mvvm-compose", version.ref = "mvvmCo
 mvvm-core = { module = "dev.icerock.moko:mvvm-core", version.ref = "mvvmCore" }
 
 kamel-image = { module = "media.kamel:kamel-image", version.ref = "kamelImage" }
+
+firebase-auth = { module = "dev.gitlive:firebase-auth", version.ref = "firebaseAuth" }
+firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
+firebase-ui-auth = { module = "com.firebaseui:firebase-ui-auth", version.ref = "firebaseUiAuth" }
+firebase-perf-ktx = { group = "com.google.firebase", name = "firebase-perf-ktx", version.ref = "firebasePerfKtx" }
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }

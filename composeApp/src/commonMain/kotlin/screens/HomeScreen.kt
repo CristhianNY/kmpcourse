@@ -11,6 +11,7 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -20,23 +21,34 @@ import androidx.compose.ui.unit.dp
 import domain.model.PicturesItemModel
 import io.kamel.image.KamelImage
 import io.kamel.image.asyncPainterResource
+import login.SignInViewModel
 import navigation.ScreenHomeComponent
+import navigation.ScreenHomeEvents
+import navigation.ScreenLoginEvent
 import org.koin.compose.koinInject
 
 @Composable
 fun HomeScreen(
     component: ScreenHomeComponent,
-    homeViewModel: HomeViewModel = koinInject<HomeViewModel>()
+    homeViewModel: HomeViewModel = koinInject<HomeViewModel>(),
 ) {
 
+
     val uiState by homeViewModel.uiState.collectAsState()
+
     Column(
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text(component.text)
+        Text(component.userData?.username.orEmpty())
 
+
+        Button(onClick = {
+            component.onEvent(ScreenHomeEvents.SingOut)
+        }) {
+            Text("SingOut")
+        }
         Button(onClick = {
             homeViewModel.getDataExample()
         }) {

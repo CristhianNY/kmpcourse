@@ -6,18 +6,33 @@ import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.decompose.router.stack.childStack
 import com.arkivanov.decompose.router.stack.pop
 import com.arkivanov.decompose.router.stack.pushNew
+import com.arkivanov.decompose.router.stack.replaceAll
 import kotlinx.serialization.Serializable
+import login.AuthProvider
+import login.UserData
 
-class RootComponent(componentContext: ComponentContext) : ComponentContext by componentContext {
+class RootComponent(
+    componentContext: ComponentContext,
+    private val authProvider: AuthProvider?
+) : ComponentContext by componentContext {
 
-    private val navigation = StackNavigation<Configuration>()
+    private val navigation: StackNavigation<Configuration> = StackNavigation<Configuration>()
+
+    private val initialConfiguration: Configuration get() =
+        authProvider?.getCurrentUser()?.let { Configuration.ScreenHome(it) }
+            ?: Configuration.ScreenLogin
 
     val childStack = childStack(
         source = navigation,
         serializer = Configuration.serializer(),
-        initialConfiguration = Configuration.ScreeLogin,
+        initialConfiguration =  initialConfiguration,
         childFactory = ::createChild
     )
+
+    private fun resetToLoginScreen() {
+        navigation.replaceAll(Configuration.ScreenLogin)
+    }
+
 
     @OptIn(ExperimentalDecomposeApi::class)
     private fun createChild(
@@ -25,21 +40,26 @@ class RootComponent(componentContext: ComponentContext) : ComponentContext by co
         context: ComponentContext
     ): Child {
         return when (config) {
-            Configuration.ScreeLogin -> Child.ScreenLogin(
+            Configuration.ScreenLogin -> Child.ScreenLogin(
                 ScreenLoginComponent(
                     context,
                     onNavigationToHome = { text ->
-                        navigation.pushNew(Configuration.ScreenHome(text))
-
+                        authProvider?.signIn()
+                    }, onLoginSuccess = {
+                        navigation.pushNew(Configuration.ScreenHome(authProvider?.getCurrentUser()))
                     })
             )
 
             is Configuration.ScreenHome -> Child.ScreenHome(
                 ScreenHomeComponent(
-                    config.text,
+                    config.userData,
                     context,
                     onBack = {
                         navigation.pop()
+                    },
+                    singOut = {
+                        authProvider?.signOut()
+                        resetToLoginScreen()
                     })
             )
         }
@@ -54,9 +74,9 @@ class RootComponent(componentContext: ComponentContext) : ComponentContext by co
     @Serializable
     sealed class Configuration {
         @Serializable
-        data object ScreeLogin : Configuration()
+        data object ScreenLogin : Configuration()
 
         @Serializable
-        data class ScreenHome(val text: String) : Configuration()
+        data class ScreenHome(val userData: UserData?) : Configuration()
     }
 }
