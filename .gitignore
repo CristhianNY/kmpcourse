@@ -15,3 +15,7 @@ captures
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+# Reglas para forzar la inclusión de todo dentro de la carpeta example
+!example/
+!example/**/*
