@@ -17,5 +17,5 @@ captures
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # Reglas para forzar la inclusión de todo dentro de la carpeta example
-!example/
-!example/**/*
+!iosApp/
+!iosApp/**/*
