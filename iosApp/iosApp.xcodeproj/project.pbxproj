@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F320782A2B87D17100EC585E /* ComposeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32078292B87D17100EC585E /* ComposeApp.framework */; };
 		F320782B2B87D17100EC585E /* ComposeApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F32078292B87D17100EC585E /* ComposeApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F32CD35D2B87DC500010C7FF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F32CD35C2B87DC500010C7FF /* FirebaseAuth */; };
+		F32CD35F2B87DD4D0010C7FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F32CD35E2B87DD4D0010C7FF /* GoogleService-Info.plist */; };
 		F33701DD2B86808F0087C7C6 /* IosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33701DC2B86808F0087C7C6 /* IosApp.swift */; };
 		F33701DF2B86808F0087C7C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33701DE2B86808F0087C7C6 /* ContentView.swift */; };
 		F33701E12B8680910087C7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F33701E02B8680910087C7C6 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		F32078292B87D17100EC585E /* ComposeApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ComposeApp.framework; path = ../composeApp/build/bin/iosSimulatorArm64/debugFramework/ComposeApp.framework; sourceTree = "<group>"; };
+		F32CD35E2B87DD4D0010C7FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F32CD3602B87DDF20010C7FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F33701D92B86808F0087C7C6 /* IosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33701DC2B86808F0087C7C6 /* IosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosApp.swift; sourceTree = "<group>"; };
 		F33701DE2B86808F0087C7C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F320782A2B87D17100EC585E /* ComposeApp.framework in Frameworks */,
+				F32CD35D2B87DC500010C7FF /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +126,8 @@
 		F33701DB2B86808F0087C7C6 /* IosApp */ = {
 			isa = PBXGroup;
 			children = (
+				F32CD3602B87DDF20010C7FF /* Info.plist */,
+				F32CD35E2B87DD4D0010C7FF /* GoogleService-Info.plist */,
 				F33701DC2B86808F0087C7C6 /* IosApp.swift */,
 				F33701DE2B86808F0087C7C6 /* ContentView.swift */,
 				F33701E02B8680910087C7C6 /* Assets.xcassets */,
@@ -172,6 +179,9 @@
 			dependencies = (
 			);
 			name = IosApp;
+			packageProductDependencies = (
+				F32CD35C2B87DC500010C7FF /* FirebaseAuth */,
+			);
 			productName = IosApp;
 			productReference = F33701D92B86808F0087C7C6 /* IosApp.app */;
 			productType = "com.apple.product-type.application";
@@ -244,6 +254,9 @@
 				Base,
 			);
 			mainGroup = F33701D02B86808F0087C7C6;
+			packageReferences = (
+				F32CD35B2B87DC500010C7FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F33701DA2B86808F0087C7C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -262,6 +275,7 @@
 			files = (
 				F33701E42B8680910087C7C6 /* Preview Assets.xcassets in Resources */,
 				F33701E12B8680910087C7C6 /* Assets.xcassets in Resources */,
+				F32CD35F2B87DD4D0010C7FF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,10 +488,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"IosApp/Preview Content\"";
 				DEVELOPMENT_TEAM = GVR8L6768C;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-                    "$(SRCROOT)/../composeApp/build/bin/iosSimulatorArm64/debugFramework",
-                );
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../composeApp/build/bin/iosSimulatorArm64/debugFramework";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IosApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -506,10 +519,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"IosApp/Preview Content\"";
 				DEVELOPMENT_TEAM = GVR8L6768C;
 				ENABLE_PREVIEWS = YES;
-			FRAMEWORK_SEARCH_PATHS = (
-                "$(SRCROOT)/../composeApp/build/bin/iosSimulatorArm64/debugFramework",
-            );
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../composeApp/build/bin/iosSimulatorArm64/debugFramework";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IosApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -654,6 +666,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F32CD35B2B87DC500010C7FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F32CD35C2B87DC500010C7FF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F32CD35B2B87DC500010C7FF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F33701D12B86808F0087C7C6 /* Project object */;
 }
