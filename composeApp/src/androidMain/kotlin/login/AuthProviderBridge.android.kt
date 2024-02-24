@@ -1,15 +1,22 @@
 package login
 
 actual class AuthProviderBridge actual constructor() : AuthProvider {
+    private var _loginCallback: LoginCallback? = null
+
+    actual override fun setLoginCallback(callback: LoginCallback?) {
+        this._loginCallback = callback
+    }
+
     override fun signIn() {
-        TODO("Not yet implemented")
+        // Implementación específica para iOS
     }
 
     override fun signOut() {
-        TODO("Not yet implemented")
+        // Implementación específica para iOS
     }
 
     override fun getCurrentUser(): UserData? {
-        TODO("Not yet implemented")
+        // Implementación específica para iOS o común si aplicable
+        return null
     }
 }

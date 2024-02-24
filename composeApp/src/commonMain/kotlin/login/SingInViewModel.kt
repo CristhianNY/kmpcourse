@@ -10,6 +10,19 @@ class SignInViewModel : ViewModel() {
     private val _state = MutableStateFlow(SignInState())
     val state = _state.asStateFlow()
 
+    init {
+        // Establece el callback al iniciar el ViewModel
+        AuthProviderBridge().setLoginCallback(object : LoginCallback {
+            override fun onLoginSuccess(userData: UserData) {
+                _state.update { it.copy(isSignInSuccessful = true) }
+            }
+
+            override fun onLoginFailure(errorMessage: String) {
+                _state.update { it.copy(signInError = errorMessage) }
+            }
+        })
+    }
+
     fun onSignInResult(result: SignInResult) {
         _state.update {
             it.copy(

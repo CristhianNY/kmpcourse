@@ -8,10 +8,28 @@
 import Foundation
 import ComposeApp
 
+
 class SwiftAuthProvider: NSObject, AuthProvider {
-    static let shared = AuthProviderBridge()
+    private var loginCallback: LoginCallback?
+
+    static let shared = SwiftAuthProvider()
+
+    func setLoginCallback(callback: LoginCallback?) {
+        self.loginCallback = callback
+    }
+
     func signIn() {
-        // Llamada al SDK de Firebase o Google para iniciar sesión
+        let loginSuccessful = true
+
+        if loginSuccessful {
+            // Simulación de datos de usuario obtenidos tras un login exitoso
+            let userData = UserData(userId: "123", username: "UserExample", profilePictureUrl: "http://example.com/image.png")
+            // Aquí invocas el callback de Kotlin Multiplatform
+            self.loginCallback?.onLoginSuccess(userData: userData)
+        } else {
+            let errorMessage = "Error en el login"
+            self.loginCallback?.onLoginFailure(errorMessage: errorMessage)
+        }
     }
 
     func signOut() {
