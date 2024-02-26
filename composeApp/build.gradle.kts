@@ -26,6 +26,7 @@ kotlin {
             baseName = "ComposeApp"
             isStatic = true
             freeCompilerArgs += "-Xbinary=bundleId=com.cristhianbonilla.composeapp"
+            debuggable = true
         }
     }
     

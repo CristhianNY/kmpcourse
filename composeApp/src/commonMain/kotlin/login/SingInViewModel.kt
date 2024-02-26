@@ -15,10 +15,12 @@ class SignInViewModel : ViewModel() {
         AuthProviderBridge().setLoginCallback(object : LoginCallback {
             override fun onLoginSuccess(userData: UserData) {
                 _state.update { it.copy(isSignInSuccessful = true) }
+                println("Login successful with user: ${userData.userId}")
             }
 
             override fun onLoginFailure(errorMessage: String) {
                 _state.update { it.copy(signInError = errorMessage) }
+                println("Login failed with error: $errorMessage")
             }
         })
     }
