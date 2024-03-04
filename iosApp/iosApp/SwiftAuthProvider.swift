@@ -7,6 +7,8 @@
 
 import Foundation
 import ComposeApp
+import GoogleSignIn
+import FirebaseAuth
 
 
 class SwiftAuthProvider: NSObject, AuthProvider {
@@ -19,16 +21,20 @@ class SwiftAuthProvider: NSObject, AuthProvider {
     }
 
     func signIn() {
-        let loginSuccessful = true
-
-        if loginSuccessful {
-            // Simulación de datos de usuario obtenidos tras un login exitoso
-            let userData = UserData(userId: "123", username: "UserExample", profilePictureUrl: "http://example.com/image.png")
-            // Aquí invocas el callback de Kotlin Multiplatform
-            self.loginCallback?.onLoginSuccess(userData: userData)
-        } else {
-            let errorMessage = "Error en el login"
-            self.loginCallback?.onLoginFailure(errorMessage: errorMessage)
+        Task {
+            do {
+                let userData = try await signInGoogle()
+                // Invoke the callback on the main thread if necessary
+                DispatchQueue.main.async {
+                    self.loginCallback?.onLoginSuccess(userData: userData)
+                }
+            } catch {
+                // Convert error to a string message
+                let errorMessage = error.localizedDescription
+                DispatchQueue.main.async {
+                    self.loginCallback?.onLoginFailure(errorMessage: errorMessage)
+                }
+            }
         }
     }
 
@@ -39,5 +45,29 @@ class SwiftAuthProvider: NSObject, AuthProvider {
     func getCurrentUser() -> UserData? {
         // Obtener el usuario actual
         return nil // Transforma el usuario de Firebase/Google en UserData
+    }
+    
+    func signInGoogle() async throws -> UserData {
+        let helper = SignInGoogleHelper()
+        let tokens = try await helper.signIn()
+        // This method now returns UserData
+        return try await signInWithGoogle(tokens: tokens)
+    }
+
+
+}
+
+// MARK: SIGN IN SSO
+
+// This method should already be correctly implemented as per previous context
+extension SwiftAuthProvider {
+    func signInWithGoogle(tokens: GoogleSignInResultModel) async throws -> UserData {
+        let credential = GoogleAuthProvider.credential(withIDToken: tokens.idToken, accessToken: tokens.accessToken)
+        let authDataResult = try await Auth.auth().signIn(with: credential)
+        let profilePictureUrlString = authDataResult.user.photoURL?.absoluteString ?? ""
+        let userData = UserData(userId: authDataResult.user.uid,
+                                username: authDataResult.user.displayName ?? "",
+                                profilePictureUrl: profilePictureUrlString)
+        return userData
     }
 }

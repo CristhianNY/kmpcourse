@@ -23,6 +23,8 @@
 		F33701FA2B8680910087C7C6 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = F33701F92B8680910087C7C6 /* Info.plist */; };
 		F3AD553D2B8E9364007DA00A /* commonMain in Resources */ = {isa = PBXBuildFile; fileRef = F3AD553B2B8E9364007DA00A /* commonMain */; };
 		F3AD553E2B8E9364007DA00A /* iosMain in Resources */ = {isa = PBXBuildFile; fileRef = F3AD553C2B8E9364007DA00A /* iosMain */; };
+		F3F22E8F2B965071009AEC6D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F22E8E2B965071009AEC6D /* Utilities.swift */; };
+		F3F22E912B966218009AEC6D /* SignInGoogleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F22E902B966218009AEC6D /* SignInGoogleHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		F33701F92B8680910087C7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3AD553B2B8E9364007DA00A /* commonMain */ = {isa = PBXFileReference; lastKnownFileType = folder; name = commonMain; path = ../../composeApp/src/commonMain; sourceTree = "<group>"; };
 		F3AD553C2B8E9364007DA00A /* iosMain */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iosMain; path = ../../composeApp/src/iosMain; sourceTree = "<group>"; };
+		F3F22E8E2B965071009AEC6D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		F3F22E902B966218009AEC6D /* SignInGoogleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInGoogleHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 				F33701E02B8680910087C7C6 /* Assets.xcassets */,
 				F33701E22B8680910087C7C6 /* Preview Content */,
 				F32CD3682B89276D0010C7FF /* SwiftAuthProvider.swift */,
+				F3F22E8E2B965071009AEC6D /* Utilities.swift */,
+				F3F22E902B966218009AEC6D /* SignInGoogleHelper.swift */,
 			);
 			path = IosApp;
 			sourceTree = "<group>";
@@ -347,8 +353,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F22E912B966218009AEC6D /* SignInGoogleHelper.swift in Sources */,
 				F33701DF2B86808F0087C7C6 /* ContentView.swift in Sources */,
 				F32CD3692B89276D0010C7FF /* SwiftAuthProvider.swift in Sources */,
+				F3F22E8F2B965071009AEC6D /* Utilities.swift in Sources */,
 				F33701DD2B86808F0087C7C6 /* IosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
