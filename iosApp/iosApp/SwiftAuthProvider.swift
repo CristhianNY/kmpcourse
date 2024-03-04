@@ -39,12 +39,21 @@ class SwiftAuthProvider: NSObject, AuthProvider {
     }
 
     func signOut() {
-        // Llamada al SDK de Firebase o Google para cerrar sesión
+        Task{
+            try Auth.auth().signOut()
+        }
     }
 
     func getCurrentUser() -> UserData? {
-        // Obtener el usuario actual
-        return nil // Transforma el usuario de Firebase/Google en UserData
+        
+        guard let user = Auth.auth().currentUser else { return nil }
+        
+        let photo = user.photoURL?.absoluteString ?? ""
+        
+        let userData = UserData(userId: user.uid,
+                                username: user.displayName ?? "",
+                                profilePictureUrl: photo)
+        return userData
     }
     
     func signInGoogle() async throws -> UserData {
