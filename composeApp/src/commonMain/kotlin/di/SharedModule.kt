@@ -4,6 +4,7 @@ import data.ExampleDataSource
 import data.ExampleDataSourceImpl
 import domain.ExampleRepository
 import domain.ExampleRepositoryImpl
+import login.AuthProviderBridge
 import login.SignInViewModel
 import org.koin.core.module.dsl.createdAtStart
 import org.koin.core.module.dsl.named
@@ -14,7 +15,8 @@ import screens.HomeViewModel
 
 val sharedModule = module {
 
-    single { SignInViewModel() }
+    single { AuthProviderBridge() }
+    single { SignInViewModel(get()) }
 
     single<ExampleDataSource> {
         ExampleDataSourceImpl()

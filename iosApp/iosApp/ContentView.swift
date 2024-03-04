@@ -4,8 +4,11 @@ import ComposeApp
 
 struct ComposeView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
-        MainViewControllerKt.MainViewController(authProvider: SwiftAuthProvider.shared)
-    }
+        let signInViewModel = KotlinBridge().getSignInViewModel()
+        SwiftAuthProvider.shared.setLoginCallback(callback: signInViewModel.createLoginCallback())
+        return MainViewControllerKt.MainViewController(authProvider: SwiftAuthProvider.shared)
+      }
+
 
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
 }

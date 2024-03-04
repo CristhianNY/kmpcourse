@@ -5,14 +5,18 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
-class SignInViewModel : ViewModel() {
+class SignInViewModel(private val authProviderBridge: AuthProviderBridge) : ViewModel() {
 
     private val _state = MutableStateFlow(SignInState())
     val state = _state.asStateFlow()
 
     init {
-        // Establece el callback al iniciar el ViewModel
-        AuthProviderBridge().setLoginCallback(object : LoginCallback {
+        authProviderBridge.setLoginCallback(createLoginCallback())
+    }
+
+    fun createLoginCallback(): LoginCallback {
+
+        return object : LoginCallback {
             override fun onLoginSuccess(userData: UserData) {
                 _state.update { it.copy(isSignInSuccessful = true) }
                 println("Login successful with user: ${userData.userId}")
@@ -22,7 +26,7 @@ class SignInViewModel : ViewModel() {
                 _state.update { it.copy(signInError = errorMessage) }
                 println("Login failed with error: $errorMessage")
             }
-        })
+        }
     }
 
     fun onSignInResult(result: SignInResult) {

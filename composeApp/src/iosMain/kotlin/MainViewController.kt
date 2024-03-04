@@ -12,6 +12,7 @@ fun MainViewController(authProvider: AuthProvider) = ComposeUIViewController {
     App(root)
 }
 
+
 fun initKoin() {
     startKoin {
         modules(sharedModule)

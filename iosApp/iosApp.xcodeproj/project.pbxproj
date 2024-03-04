@@ -21,6 +21,8 @@
 		F33701EE2B8680910087C7C6 /* IosAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33701ED2B8680910087C7C6 /* IosAppTests.swift */; };
 		F33701F82B8680910087C7C6 /* IosAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33701F72B8680910087C7C6 /* IosAppUITests.swift */; };
 		F33701FA2B8680910087C7C6 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = F33701F92B8680910087C7C6 /* Info.plist */; };
+		F3AD553D2B8E9364007DA00A /* commonMain in Resources */ = {isa = PBXBuildFile; fileRef = F3AD553B2B8E9364007DA00A /* commonMain */; };
+		F3AD553E2B8E9364007DA00A /* iosMain in Resources */ = {isa = PBXBuildFile; fileRef = F3AD553C2B8E9364007DA00A /* iosMain */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		F33701F32B8680910087C7C6 /* IosAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33701F72B8680910087C7C6 /* IosAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosAppUITests.swift; sourceTree = "<group>"; };
 		F33701F92B8680910087C7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3AD553B2B8E9364007DA00A /* commonMain */ = {isa = PBXFileReference; lastKnownFileType = folder; name = commonMain; path = ../../composeApp/src/commonMain; sourceTree = "<group>"; };
+		F3AD553C2B8E9364007DA00A /* iosMain */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iosMain; path = ../../composeApp/src/iosMain; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		F33701D02B86808F0087C7C6 = {
 			isa = PBXGroup;
 			children = (
+				F3AD553A2B8E9328007DA00A /* Kotlin Debug */,
 				F33701DB2B86808F0087C7C6 /* IosApp */,
 				F33701EC2B8680910087C7C6 /* IosAppTests */,
 				F33701F62B8680910087C7C6 /* IosAppUITests */,
@@ -166,6 +171,15 @@
 				F33701F92B8680910087C7C6 /* Info.plist */,
 			);
 			path = IosAppUITests;
+			sourceTree = "<group>";
+		};
+		F3AD553A2B8E9328007DA00A /* Kotlin Debug */ = {
+			isa = PBXGroup;
+			children = (
+				F3AD553B2B8E9364007DA00A /* commonMain */,
+				F3AD553C2B8E9364007DA00A /* iosMain */,
+			);
+			path = "Kotlin Debug";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,9 +297,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3AD553D2B8E9364007DA00A /* commonMain in Resources */,
 				F33701E42B8680910087C7C6 /* Preview Assets.xcassets in Resources */,
 				F33701E12B8680910087C7C6 /* Assets.xcassets in Resources */,
 				F32CD35F2B87DD4D0010C7FF /* GoogleService-Info.plist in Resources */,
+				F3AD553E2B8E9364007DA00A /* iosMain in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

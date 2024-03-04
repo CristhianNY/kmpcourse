@@ -7,24 +7,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "266CFFAA-CA46-448E-9722-132C2F7208B5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IosApp/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "7"
-            endingLineNumber = "7"
-            landmarkName = "makeUIViewController(context:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "2F68D416-CB32-44BA-B6C2-76D8D468E504"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IosApp/SwiftAuthProvider.swift"
@@ -40,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "37EAC71C-39DA-4917-AC46-E1F6AC3D8DC3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IosApp/SwiftAuthProvider.swift"
@@ -50,6 +34,468 @@
             endingLineNumber = "28"
             landmarkName = "signIn()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "782DEC60-1F01-4752-847D-696B94878440"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../composeApp/src/iosMain/kotlin/MainViewController.kt"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "782DEC60-1F01-4752-847D-696B94878440 - 93f1954ba7d631e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:MainViewController$lambda$0#internal"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/iosMain/kotlin/MainViewController.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "516">
+               </Location>
+               <Location
+                  uuid = "782DEC60-1F01-4752-847D-696B94878440 - 93f1954ba7d631e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:MainViewController$lambda$0#internal"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/iosMain/kotlin/MainViewController.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "896">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D898D790-85B7-4020-B35D-09B93A4BA25A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../composeApp/src/commonMain/kotlin/navigation/RootComponent.kt"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "D898D790-85B7-4020-B35D-09B93A4BA25A - a3a672a6bd4075bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:navigation.RootComponent.createChild$lambda$0#internal"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/commonMain/kotlin/navigation/RootComponent.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "D898D790-85B7-4020-B35D-09B93A4BA25A - a3a672a6bd4075bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:navigation.RootComponent.createChild$lambda$0#internal"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/commonMain/kotlin/navigation/RootComponent.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "D898D790-85B7-4020-B35D-09B93A4BA25A - 244659f6bae33c84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:navigation.RootComponent.$createChild$lambda$0$FUNCTION_REFERENCE$1.invoke#internal"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/commonMain/kotlin/navigation/RootComponent.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "D898D790-85B7-4020-B35D-09B93A4BA25A - f2738258fd6eb6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:navigation.RootComponent.$createChild$lambda$0$FUNCTION_REFERENCE$1.$&lt;bridge-UNNN&gt;invoke(kotlin.String){}#internal"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/commonMain/kotlin/navigation/RootComponent.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7266D587-0CB9-42E7-858D-0E57967BE982"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../composeApp/src/commonMain/kotlin/navigation/RootComponent.kt"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FCC201B-CE74-418A-90AD-A3E54627D416"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../composeApp/src/commonMain/kotlin/screens/LoginScreen.kt"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5AB10522-C41C-4248-BDCE-EAE64A648196"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../composeApp/src/commonMain/kotlin/login/SingInViewModel.kt"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "5AB10522-C41C-4248-BDCE-EAE64A648196 - 919a3b208ecb0d5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:login.SignInViewModel.object-1.onLoginSuccess#internal"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/commonMain/kotlin/login/SingInViewModel.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  uuid = "5AB10522-C41C-4248-BDCE-EAE64A648196 - 919a3b208ecb0d5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:login.SignInViewModel.object-1.onLoginSuccess#internal"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/commonMain/kotlin/login/SingInViewModel.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "324">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C69F34CC-FECA-4465-B019-D7BD38CF124F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../composeApp/src/commonMain/kotlin/login/SingInViewModel.kt"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "C69F34CC-FECA-4465-B019-D7BD38CF124F - 64ee77a14ca0a90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:login.SignInViewModel.object-1.onLoginFailure#internal"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/commonMain/kotlin/login/SingInViewModel.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "C69F34CC-FECA-4465-B019-D7BD38CF124F - 64ee77a14ca0a90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:login.SignInViewModel.object-1.onLoginFailure#internal"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/commonMain/kotlin/login/SingInViewModel.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "312">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C6045BF-5266-48B0-8297-96B2F08635E0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IosApp/SwiftAuthProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "signIn()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "267C6BBF-163C-4A3D-985E-01C60DF851F7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IosApp/SwiftAuthProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "signIn()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1AFB20AE-A7FD-4090-BBE2-EE65216459D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IosApp/SwiftAuthProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "signIn()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43A9C4CC-95C3-4980-AD6B-C9D51055F450"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IosApp/SwiftAuthProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "signIn()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84FC3847-6867-4514-B2A4-EC1F1C0C9E2A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IosApp/SwiftAuthProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "signIn()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2EA80BD-54FB-4C9E-AAF4-69829DC744D9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../composeApp/src/commonMain/kotlin/login/SingInViewModel.kt"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "F2EA80BD-54FB-4C9E-AAF4-69829DC744D9 - 4c6c56090df6c6f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:login.SignInViewModel#&lt;init&gt;(){}"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/commonMain/kotlin/login/SingInViewModel.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "352">
+               </Location>
+               <Location
+                  uuid = "F2EA80BD-54FB-4C9E-AAF4-69829DC744D9 - 64e3fe4928db2523"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:login.SignInViewModel.object-1.&lt;init&gt;#internal"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/commonMain/kotlin/login/SingInViewModel.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06B5E92B-0830-49C0-8396-977699892AF3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../composeApp/src/commonMain/kotlin/login/SingInViewModel.kt"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "06B5E92B-0830-49C0-8396-977699892AF3 - 4c6c56090df6c6f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:login.SignInViewModel#&lt;init&gt;(){}"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/commonMain/kotlin/login/SingInViewModel.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "352">
+               </Location>
+               <Location
+                  uuid = "06B5E92B-0830-49C0-8396-977699892AF3 - 64e3fe4928db2523"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kfun:login.SignInViewModel.object-1.&lt;init&gt;#internal"
+                  moduleName = "IosApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cristhianbonilla/Documents/KMPExample/composeApp/src/commonMain/kotlin/login/SingInViewModel.kt"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "449467C6-138D-468E-AE36-FD8B24B0BD1B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IosApp/SwiftAuthProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "setLoginCallback(callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F32A0680-8249-44CD-A612-BE59ADBF79F3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../composeApp/src/commonMain/kotlin/login/SingInViewModel.kt"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
