@@ -5,13 +5,13 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
-class SignInViewModel(private val authProviderBridge: AuthProviderBridge) : ViewModel() {
+class SignInViewModel( authProvider: AuthProvider? = null) : ViewModel() {
 
     private val _state = MutableStateFlow(SignInState())
     val state = _state.asStateFlow()
 
     init {
-        authProviderBridge.setLoginCallback(createLoginCallback())
+        authProvider?.setLoginCallback(createLoginCallback())
     }
 
     fun createLoginCallback(): LoginCallback {
